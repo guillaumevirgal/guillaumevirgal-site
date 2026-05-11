@@ -1,0 +1,92 @@
+---
+const name = "Guillaume Virgal";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Projects by Guillaume Virgal" />
+    <title>Projects | {name}</title>
+    <link rel="icon" type="image/jpeg" href="/favicon.jpeg" />
+  </head>
+  <body>
+    <main>
+      <a href="/" class="back">← Back</a>
+      <h1>Projects</h1>
+      <p class="placeholder">Coming soon. Currently building an autonomous mobile robot for a HardwareX submission this summer. Writeups and code will appear here as the project progresses.</p>
+    </main>
+
+    <style>
+      :root {
+        --text: #1a1a1a;
+        --muted: #666;
+        --accent: #1a1a1a;
+        --bg: #fafaf7;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html, body {
+        height: 100%;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      main {
+        max-width: 36rem;
+        margin: 0 auto;
+        padding: 6rem 1.5rem 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+
+      .back {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+
+      .back:hover {
+        color: var(--text);
+      }
+
+      h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+      }
+
+      .placeholder {
+        font-size: 1.125rem;
+        color: var(--muted);
+        max-width: 32rem;
+      }
+
+      @media (max-width: 480px) {
+        main {
+          padding: 3rem 1.25rem;
+        }
+        h1 {
+          font-size: 1.75rem;
+        }
+        .placeholder {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </body>
+</html>
