@@ -4,6 +4,7 @@ const description = "Robotics engineer focused on hardware/software integration.
 const email = "guillaume.vrg94@gmail.com";
 const github = "https://github.com/guillaumevirgal";
 const linkedin = "https://www.linkedin.com/in/guillaume-virgal";
+const twitter = "https://x.com/guillaumevirgal";
 ---
 
 <!DOCTYPE html>
@@ -13,16 +14,18 @@ const linkedin = "https://www.linkedin.com/in/guillaume-virgal";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <title>{name}</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/jpeg" href="/favicon.jpeg" />
   </head>
   <body>
     <main>
-      <img src="/me.jpg" alt={name} class="photo" />
+      <img src="/myphoto.jpeg" alt={name} class="photo" />
       <h1>{name}</h1>
       <p class="description">{description}</p>
       <nav class="links">
+        <a href="/projects">Projects</a>
         <a href={github} target="_blank" rel="noopener">GitHub</a>
         <a href={linkedin} target="_blank" rel="noopener">LinkedIn</a>
+        <a href={twitter} target="_blank" rel="noopener">X</a>
         <a href={`mailto:${email}`}>Email</a>
       </nav>
     </main>
