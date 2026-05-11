@@ -1,11 +1,118 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const name = "Guillaume Virgal";
+const description = "Robotics engineer focused on hardware/software integration. Currently completing an MSc in Robotics at Heriot-Watt University in Edinburgh, with prior work in embedded systems and medical device control. Moving to Australia in 2027 to work on field robotics.";
+const email = "guillaume.vrg94@gmail.com";
+const github = "https://github.com/guillaumevirgal";
+const linkedin = "https://www.linkedin.com/in/guillaume-virgal";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{name}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <main>
+      <img src="/me.jpg" alt={name} class="photo" />
+      <h1>{name}</h1>
+      <p class="description">{description}</p>
+      <nav class="links">
+        <a href={github} target="_blank" rel="noopener">GitHub</a>
+        <a href={linkedin} target="_blank" rel="noopener">LinkedIn</a>
+        <a href={`mailto:${email}`}>Email</a>
+      </nav>
+    </main>
+
+    <style>
+      :root {
+        --text: #1a1a1a;
+        --muted: #666;
+        --accent: #1a1a1a;
+        --bg: #fafaf7;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html, body {
+        height: 100%;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      main {
+        max-width: 36rem;
+        margin: 0 auto;
+        padding: 6rem 1.5rem 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+
+      .photo {
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 0.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+      }
+
+      .description {
+        font-size: 1.125rem;
+        color: var(--text);
+        max-width: 32rem;
+      }
+
+      .links {
+        display: flex;
+        gap: 1.25rem;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+      }
+
+      .links a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+        transition: opacity 0.15s ease;
+      }
+
+      .links a:hover {
+        opacity: 0.6;
+      }
+
+      @media (max-width: 480px) {
+        main {
+          padding: 3rem 1.25rem;
+        }
+        h1 {
+          font-size: 1.75rem;
+        }
+        .description {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </body>
+</html>
