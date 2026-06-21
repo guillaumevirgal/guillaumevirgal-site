@@ -10,7 +10,7 @@ This post is about that gap, and the three things I did to close it while dealin
 
 Context: this was a group coursework project at Heriot-Watt for the B5XRO Robotic Mechanical Systems course, where we designed and built a robotic letter sorter. I led the static analysis, the inverse kinematics, and the motion control software. The full system used machine vision to read names off envelopes and dropped them into pigeonholes. The arm worked.
 
-![Final CAD render of the 4-DOF letter sorter arm](../../assets/robotarm/cad-robot-arm.jpg)
+![Final CAD render of the 4-DOF letter sorter arm](/robotarm/cad-robot-arm.jpg)
 
 
 ## The setup
@@ -21,7 +21,7 @@ The standard simplification is to treat each link as a uniform rod, which means 
 
 For our arm, the worst case is fully extended horizontally. That puts every mass at its maximum lever arm.
 
-![](../../assets/robotarm/torque-robot-arm.jpg)
+![](/robotarm/torque-robot-arm.jpg)
 
 Dimensions and masses, after the first round of CAD:
 
@@ -90,7 +90,7 @@ Jonathan proposed a mechanism that pulled the elbow actuator back to the shoulde
 
 ### Adding a planetary gearbox at the shoulder
 
-![Final CAD render of the planetary gearbox for the shoulder joint](../../assets/robotarm/planetary-gearbox.jpg)
+![Final CAD render of the planetary gearbox for the shoulder joint](/robotarm/planetary-gearbox.jpg)
 
 I re-ran the analysis with the new dimensions and masses. The shoulder requirement dropped from 2.05 Nm to 1.13 Nm, the elbow from 0.76 Nm to 0.31 Nm. The elbow now sat just under the S3003 servo's 0.32 Nm rating, which closed that joint by mechanical changes alone. The shoulder was still well over what the motor could supply.
 
